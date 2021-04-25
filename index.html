@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>ポートフォリオ</title>
+
+    <meta name="description" content="">
+    <meta property="og:title" content="ポートフォリオ">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/images/og/og.png">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ポートフォリオ">
+
+    <script type="text/javascript">
+        var ua = navigator.userAgent;
+        let domElem,
+            list;
+        document.open();
+        if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || (ua.indexOf('Android') > 0) && (ua.indexOf('Mobile') >
+            0) || ua.indexOf('Windows Phone') > 0) { //スマートフォン
+            document.write('<meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0">');
+        } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) { //旧iPad（iOS 12まで）＆androidタブレット
+            document.write('<meta content="width=1366" name="viewport">');
+            window.onload = function(){ // bodyのiPadのクラスを付ける
+                domElem = document.getElementsByTagName("body");
+                domElem[0].classList.add('iPad');
+            };
+            // domElem.classList.add('iPad');
+        } else {
+            var agent = window.navigator.userAgent.toLowerCase();
+            var ipad = agent.indexOf('ipad') > -1 || agent.indexOf('macintosh') > -1 && 'ontouchend' in document;
+            if(ipad == true){ //新iPad（iOS 13～）
+                document.write('<meta content="width=1366" name="viewport">');
+                window.onload = function(){ // bodyのiPadのクラスを付ける
+                    domElem = document.getElementsByTagName("body");
+                    domElem[0].classList.add('iPad');
+                };
+            }else{ //PC
+                document.write('<meta content="width=1200" name="viewport">');
+            }
+        }
+        document.close();
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body>
+    
+    <div id="app">
+
+<header class="l-header">
+    <div class="l-header__upper">
+        <div class="m-header__nav">
+            <ul class="m-header__navList">
+                <li class="m-header__navListItem m-header__navListItem--faq">
+                    <a class="m-header__navListItemAnc" href="#anc01">仕事</a>
+                </li>
+                <li class="m-header__navListItem m-header__navListItem--op">
+                    <a class="m-header__navListItemAnc" href="#anc02">スキル</a>
+                </li>
+                <li class="m-header__navListItem m-header__navListItem-- m-header__navListItem--pln">
+                    <a class="m-header__navListItemAnc" href="#anc03">プロフィール</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SPアイコン -->
+        <a class="l-headerIcon" aria-hidden="true">
+            <span class="l-headerIcon__line01"></span>
+            <span class="l-headerIcon__line02"></span>
+            <span class="l-headerIcon__line03"></span>
+        </a>
+        <!-- SPアイコン -->
+    </div>
+
+    <!-- SPメニュー中身 -->
+    <div class="m-header__spList">
+        <ul>
+            <a href="#anc01"><li class="m-header__spListItem">仕事</li></a>
+            <a href="#anc02"><li class="m-header__spListItem">スキル</li></a>
+            <a href="#anc03"><li class="m-header__spListItem">プロフィール</li></a>
+        </ul>
+    </div>
+    <!-- SPメニュー中身 -->
+</header>
+
+<main class="l-main">
+
+    <div class="m-kv">
+        <div class="m-kv__inner">
+            <div class="m-kv__ttlBox">
+                <h1 class="m-kv__ttl">
+                    <span class="m-kv__ttlRead">佐藤 崇史のポートフォリオ</span><br>
+                    <span class="m-kv__ttlSec">TAKASHI <br class="u-sp">SATO'S</span><br>
+                    <span class="m-kv__ttlSec2">PORTFOLIO</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-top">
+        <!-- /.p-top__info -->
+
+        <!-- <section class="p-top__about">
+            <h2 class="m-titleA m-title-pdA"><span>HACCPナビ</span>は<br>HACCPに対応したドキュメント作成を<br class="u-pc">誰でも、簡単に、効率化できるサービスです。</h2>
+
+            <div class="l-content">
+                <div class="m-column--02 p-top__aboutColumn">
+                    <div class="p-top__aboutTxt">
+                        <p>2020年6月からHACCPの実施が義務付けられています。HACCPナビは、HACCPに沿った衛生管理の制度化、JFS-A・B・C 規格で求められる食品安全マネジメントシステムにかかわる文書・帳票の作成やその運用実績の記録を支援します。ご活用いただくことで、より効率的に食品安全マネジメントシステムを構築・運用・見直し・伝承できます。</p>
+                    </div>
+                    <div>
+                        <div class="p-top__aboutMovie">
+                            <p class="p-top__aboutMovieBtn"><iframe width="463" height="230" src="https://www.youtube.com/embed/87LlnB3CkO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-btn__box m-btn__box--center">
+                    <a href="/service/" class="m-btn m-btn--nv">HACCPナビとは？</a>
+                </div>
+
+            </div>
+        </section> -->
+        <!-- /.p-top__about -->
+
+        <section class="p-top__task" id="anc01">
+            <div class="l-content">
+                <h2 class="m-titleB m-title-pdA">仕事</h2>
+                <div class="m-column--03 p-top__taskColumn">
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--10">
+                        <a href="https://haccpnavi.com/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">MRI HACCPナビ（先方都合でまだ公開されていません）</p>
+                                <p>htmlコーディング、JS実装<br>web release組み込み<br>要件定義</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--01">
+                        <a href="https://www.mitsumura.co.jp/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">光村印刷株式会社</p>
+                                <p>htmlコーディング<br>JS実装<br>web release組み込み<br>要件定義</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--02">
+                        <a href="https://www.furukawa.co.jp/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">古河電工株式会社</p>
+                                <p>htmlコーディング<br>JS実装<br>要件定義</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--03">
+                        <a href="https://www.soir.co.jp/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">東京ソワール</p>
+                                <p>htmlコーディング<br>JS実装<br>WordPress組み込み</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--04">
+                        <a href="https://www.shutoko.jp/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">首都高ドライバーズサイト</p>
+                                <p>htmlコーディング<br>JS実装</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--05">
+                        <a href="https://www.asahi-kasei.co.jp/saran/global/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">旭化成 HOME PRODUCTS global</p>
+                                <p>htmlコーディング<br>JS実装<br>CANVASアニメーション<br>デザイン</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--06">
+                        <a href="https://d-pa.or.jp/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">ドローン操縦士協会</p>
+                                <p>htmlコーディング<br>JS実装</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--07">
+                        <a href="https://www.nyk.co.jp/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">日本冶金工業株式会社</p>
+                                <p>htmlコーディング（PUG使用）<br>JS実装</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--08">
+                        <a href="javascript:void(0);" class="p-top__taskColumntextLink p-top__taskColumntextLink--no">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">EC ローソンフレッシュ（閉鎖）</p>
+                                <p>htmlコーディング<br>JS実装<br>運用<br>GA解析</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-top__taskColumnItem p-top__taskColumnItem--09">
+                        <a href="https://www.keiba.go.jp/special-2020/" target="_blank" class="p-top__taskColumntextLink">
+                            <div class="p-top__taskColumntext">
+                                <p class="p-top__taskColumntextTtl">地方競馬情報サイト</p>
+                                <p>htmlコーディング<br>JS実装</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.p-top__task -->
+
+        <section class="p-top__flow" id="anc02">
+
+            <h2 class="m-titleB m-title-pdB">スキル</h2>
+
+            <div class="l-content">
+                <div class="p-top__flowBox">
+                    <div class="p-top__flowItem">
+                        <p class="p-top__flowHead p-top__flowHead--01">コーディング</p>
+                        <p class="p-top__flowText">HTML5<br>CSS3<br>PHP</p>
+                    </div>
+                    <div class="p-top__flowItem">
+                        <p class="p-top__flowHead p-top__flowHead--02">フロントエンド</p>
+                        <p class="p-top__flowText">javaScrpit<br>jQuery<br>Vue.js<br>ActionScript</p>
+                        <div class="p-top__flowText2">メインで使用しているのはjQUeryとなります。Vueに関しては、業務の中での実装の要件があまりなく、複雑な実装などは実務で使用してことはありません</div>
+                    </div>
+                    <div class="p-top__flowItem">
+                        <p class="p-top__flowHead p-top__flowHead--03">デザイン</p>
+                        <p class="p-top__flowText">Photoshop<br>Illustrator<br>XD<br>Animate</p>
+                        <div class="p-top__flowText2">もともとデザイナーであったため、デザイン系アプリケーションはほぼ使用出来ます。</div>
+                    </div>
+                    <div class="p-top__flowItem">
+                        <p class="p-top__flowHead p-top__flowHead--03">その他<br>（開発環境など）</p>
+                        <p class="p-top__flowText">gulp<br>git<br>ejs<br>SCSS</p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- /.p-top__flow -->
+
+        <section class="p-top__info" id="anc03">
+            <h2 class="m-titleA m-title-pdA">プロフィール</h2>
+            <div class="l-content p-top__infoBox">
+                <ul class="p-top__infoList">
+                    <li class="p-top__infoItem">
+                        <div class="p-top__infoText">【サイトリニューアル予定のお知らせ】<br>4月15日（木）17:00より、本サイトのリニューアル作業を予定しております。作業中は一時的につながりにくくなる可能性がございますが、何卒ご理解いただけますと幸いです。</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</main>
+
+    </div>
+    <script type="text/javascript" src="/assets/js/bundle.js"></script>
+
+</body>
+
+</html>
+
